@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: blue;
+  width: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.team {
+  grid-row: 1 / 2;
+  grid-column: 2/ 3;
+}
+
+.container > div {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.title {
+  color: blue;
+  font-size: 26px;
+  padding-bottom: 10px;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 2px;
+}
+
+.contents {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+/* Mục tiêu */
+.goals .content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 30px 1fr;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+  margin-bottom: 20px;
+}
+
+.goals .icon {
+  min-width: 30px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+
+.goals h2 {
+  display: block;
+  width: 100%;
+}
+
+/* Thành viên */
+.team .content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 30px 1fr;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+  margin-bottom: 20px;
+}
+
+.team i {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 25px;
+  text-align: center;
+  margin-top: -15px;
+}
+
+/* Timeline */
+.timeline {
+  grid-column: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.timeline .content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 30px 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timeline span {
+  grid-row: 1 / 3;
+  border: #000 solid 2px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: gray;
+  color: #f7f7f7;
+  font-weight: bold;
+  margin-top: -20px;
+  margin-right: 10px;
+}
+
+.timeline h2 {
+  font-size: 17px;
+}
+
+.timeline p {
+  border-bottom: rgba(0, 0, 0, 0.2) dotted 2px;
+  padding-bottom: 10px;
+}
+
+.timeline .hightlight {
+  border-bottom: rgba(0, 255, 0, 0.5) dotted 2px;
+}
+
+/* Phạm vi */
+.scopes .contents {
+  display: flex;
+}
+
+.scopes .content {
+  width: 50%;
+  padding-right: 15%;
+}
+
+.scopes h2 {
+  margin-bottom: 20px;
+}
+
+/* Các phần ưu tiên */
+.primary .content {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.primary .icon {
+  width: 100px;
+  height: 100px;
+  margin: -10px 20px 0 0;
+}
+
+/* Khung nhing Tablet, Mobile */
+@media (max-width: 786px) {
+  .container {
+    display: block;
+  }
+
+  .container > div {
+    margin-bottom: 20px;
+  }
+
+  /* Phần Goals (Mục tiêu) */
+  .goals .content {
+    display: block;
+  }
+
+  .goals .icon {
+    display: block;
+    margin: auto auto;
+  }
+
+  /* Phần thành viên (Team) */
+  .team .content {
+    display: block;
+  }
+
+  .team i {
+    display: block;
+    margin: 0 auto;
+  }
+  /* Phần Timeline */
+  .timeline .content {
+    display: block;
+  }
+
+  .timeline span {
+    display: inline-block;
+    margin: 0;
+  }
+
+  /* Phần Phạm vi (Scopes) */
+  .scopes .contents {
+    display: block;
+  }
+
+  .scopes .content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .scopes h2 {
+    margin-bottom: 10px;
+  }
+
+  /* Các phần ưu tiên (Primery) */
+  .primary .content {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .primary .icon {
+    width: 100%;
+    height: 50px;
+  }
+}
